@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  position: relative;
 }
 .banner{
   width: 100%;
@@ -18,17 +17,20 @@
   z-index: 1000;
   margin-top: -20px;
 }
-
 /* .navbar {
   idk just leaving it empty for now i guess
 } */
-
 .logo_half{
   width: 160px;
   cursor: pointer;
   margin-left: 30px;
   margin-top: 30px;
 }
+
+.navbar ul {
+  float: right;
+}
+
 .navbar ul li{
   cursor: pointer;
   margin: 0 30px;
@@ -38,6 +40,7 @@
   list-style: none;
   display: inline-block;
   position: relative;
+  font-size: 15px;
 }
 .navbar ul li a{
   text-decoration: none;
@@ -57,74 +60,53 @@
 .navbar ul li:hover:after{
   width: 100%;
 }
-.logo{
+#mission{
+  border: 2px solid rgb(30, 30, 129);
+  padding: 10px;
+  border-radius: 4px;
+  z-index: 1001;
+}
+/* .select_box{
+  width: 10%;
+  height: 40px;
+  position: absolute;
+  margin-left: 18;
+} */
+.Mission{
   width: 30%;
-  margin-bottom: 30px;
-  margin-top: 120px;
-}
-.content{
+  height: 80px;
+  font-weight: bold;
+  font-size: 80px;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(15, 10, 78, 0.4);
   color: white;
-  text-align: center;
-  justify-content: space-between;
-}
-.heading{
-  color: rgb(227, 137, 46);
-}
-.subheading{
-  margin-bottom: 30px;
-  margin-top: 5px;
-  color: rgb(227, 137, 46);
-}
-.p1{
-  margin-bottom: 20px;
-}
-.p2{
-  line-height: 2;
-  margin-bottom: 20px;
-}
-.GetStartedContainer{
+  text-transform: uppercase;
+  padding: 10px;
+  border: 1px solid rgba(240, 240, 244, 0.4);
   display: flex;
   justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-top: 130px;
   position: relative;
-  z-index: 1;
 }
-.GetStarted{
- width: 200px;
- padding: 15px 0;
- text-align: center;
- margin: 20px 10px;
- border-radius: 25px;
- font-weight: bold;
- border: 2px solid rgb(234, 22, 22);
- background: transparent;
- color: rgb(234, 22, 22);
- text-transform: uppercase;
- cursor: pointer;
- position: relative;
- overflow: hidden;
- transition: 0.5s;
- z-index: 2;
-}
-span{
-  background: rgb(234, 22, 22);
-  height: 100%;
-  width: 0%;
-  border-radius: 25px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: 0.5s;
-}
-.GetStarted:hover span{
-  width: 100%;
-}
-.GetStarted:hover{
+.Mission_Body{
+  width: 150%;
+  height: 245px;
+  margin-top: 500px;
+  font-weight: bold;
+  font-size: 23px;
+  background-color: rgba(15, 10, 78, 0.4);
   color: white;
-}
-.GetStarted:active span{
-  background: rgb(151, 13, 13);
-}
-.GetStarted:active{
-  border: 2px solid rgb(151, 13, 13);
+  border: 1px solid rgba(240, 240, 244, 0.4);
+
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  text-transform: none;
+  font-weight: normal;
+  border-radius: 20px;
 }
