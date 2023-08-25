@@ -7,15 +7,25 @@
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url(building.jpg);
+  /* background-color: white; */
   background-size: cover;
   background-position: center;
+  z-index: 0;
+  position: relative;
+}
+.rectangle-background{
+  background-color: rgba(0, 0, 0, 1);
+  width: 100%;
+  height: 120px;
+  position: absolute;
+  z-index: -1;
 }
 .navbar-container{
   float: right;
   margin-right: 30px;
   position: relative;
   z-index: 1000;
-  margin-top: -20px;
+  margin-top: -30px;
 }
 /* .navbar {
   idk just leaving it empty for now i guess
@@ -23,8 +33,8 @@
 .logo_half{
   width: 160px;
   cursor: pointer;
-  margin-left: 30px;
-  margin-top: 30px;
+  margin-left: 50px;
+  margin-top: 50px;
 }
 
 .navbar ul {
