@@ -1,0 +1,817 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif;
+}
+:root{
+  --text-color: #fff;
+  --bg-color: #000;
+  --main-color: #4378ff;
+  --head-color: #f59d22;
+
+  --h1-font: 3rem;
+  --h2-font: 1rem;
+  --p-font: 1rem;
+}
+body{
+  color: var(--text-color);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to left, rgba(0,0,0,0),rgba(0,0,0,0)), url(../img/polygon-scatter-haikei\ \(1\).svg);
+
+}
+header{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgb(186, 186, 186);
+  padding: 27px 17%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .50s ease;
+}
+/* .logo_half{
+  width: 10%;
+  height: 10%;
+} */
+.navbar{
+  display: flex;
+}
+.navbar a{
+  color: black;
+  font-size: var(--p-font);
+  font-weight: 700;
+  margin: 15px 22px;
+  transition: all .50s ease;
+}
+.navbar a:hover{
+  color: rgb(21, 120, 241);
+}
+.navbar li:hover{
+  color: rgb(21, 120, 241);
+  transform: translateY(-3px);
+  transition: all .50s ease;
+}
+#navbar-services a{
+  color: rgb(255, 0, 17);
+}
+.h-right{
+  display: flex;
+  align-items: center;
+}
+.h-right a:first-child{
+  color: black;
+  font-size: var(--p-font);
+  margin-right: 20px;
+}
+.h-right a{
+  vertical-align: middle;
+  font-size: 20px;
+  color: var(--text-color);
+  margin-right: 18px;
+  margin-left: 5px;
+  transition: all .50s ease;
+}
+.h-right a:hover{
+  color: var(--main-color);
+  transform: translateY(-3px);
+}
+#menu-icon{
+  color: black;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+.SERVICES{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 200px;
+  flex: 1;
+}
+.SERVICES-content h1{
+  font-size: 40px;
+  font-weight: 1000;
+  margin-bottom: 10px;
+  letter-spacing: 6px;
+  color: black;
+}
+.SERVICES-content h2{
+  font-size: 20px;
+  font-weight: 1000;
+  margin-bottom: 5px;
+  letter-spacing: 3px;
+  color: black;
+}
+/* .SERVICES-content h3{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 75px;
+  margin-bottom: -20px;
+  letter-spacing: 3px;
+  color: black;
+  text-transform: uppercase;
+} */
+.SERVICES-content h3 {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  margin-bottom: -20px;
+  margin-top: 75px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #010101;
+}
+
+.SERVICES-content h3::before,
+.SERVICES-content h3::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 120px;
+  height: 2px;
+  line-height: 1.2;
+  background-color: #000000; /* Change the color as needed */
+}
+
+.SERVICES-content h3::before {
+  left: -150px;
+}
+.SERVICES-content h3::after {
+  right: -150px;
+}
+.SERVICES-box-1{
+  margin-top: 100px;
+  display: flex;
+  color: black;
+  column-gap: 60px;
+}
+.strategy h1{
+  font-size: var(--p-font);
+  flex: 1;
+  padding: 20px;
+  width: 500px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+  background-color: black;
+  color: white;
+  /* border-left: 4px solid black; */
+  text-transform: uppercase;
+}
+.strategy-content{
+  font-size: var(--p-font);
+  padding: 20px;
+  width: 500px;
+  border: 1px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+  box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.5);
+
+}
+.strategy-pic{
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.finance h1{
+  font-size: var(--p-font);
+  flex: 1;
+  padding: 20px;
+  width: 500px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+}
+.finance-content{
+  font-size: var(--p-font);
+  padding: 20px;
+  width: 500px;
+  border: 1px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.5);
+
+}
+.finance-pic{
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.SERVICES-box-2{
+  margin-top: 100px;
+  display: flex;
+  color: black;
+  column-gap: 60px;
+  align-items: center;
+  justify-content: center;
+}
+.operations h1{
+  font-size: var(--p-font);
+  flex: 1;
+  padding: 20px;
+  width: 500px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+}
+.operations-content{
+  font-size: var(--p-font);
+  padding: 20px;
+  width: 500px;
+  border: 1px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.5);
+
+}
+.operations-pic{
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.procurement h1{
+  font-size: var(--p-font);
+  flex: 1;
+  padding: 20px;
+  width: 500px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+}
+.procurement-content{
+  font-size: var(--p-font);
+  padding: 20px;
+  width: 500px;
+  border: 1px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.5);
+
+}
+.procurement-pic{
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.SERVICES-box-3{
+  margin-top: 100px;
+  display: flex;
+  color: black;
+  column-gap: 60px;
+  align-items: center;
+  justify-content: center;
+}
+.HR h1{
+  font-size: var(--p-font);
+  flex: 1;
+  padding: 20px;
+  width: 500px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+}
+.HR-content{
+  font-size: var(--p-font);
+  padding: 20px;
+  width: 500px;
+  border: 1px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.5);
+}
+.HR-pic{
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+/* ----------------------TECHNOLOGY DESIGN---------------------- */
+.technology{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 100px;
+  flex: 1;
+}
+.technology-content h3 {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  margin-bottom: -20px;
+  margin-top: 75px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #010101;
+}
+.technology-content h3::before,
+.technology-content h3::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 120px;
+  height: 2px;
+  line-height: 1.2;
+  background-color: #000000; /* Change the color as needed */
+}
+
+.technology-content h3::before {
+  left: -150px;
+}
+.technology-content h3::after {
+  right: -150px;
+}
+.technology-box-1{
+  margin-top: 100px;
+  display: flex;
+  color: black;
+  column-gap: 60px;
+  /* justify-content: center; */
+}
+.appdev h1{
+  font-size: var(--p-font);
+  flex: 1;
+  padding: 20px;
+  width: 500px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  margin-bottom: 12px;
+}
+.appdev-content{
+  font-size: var(--p-font);
+  padding: 20px;
+  width: 500px;
+  border: 1px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.5);
+
+}
+.appdev-pic{
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.cloud-sol h1{
+  font-size: var(--p-font);
+  flex: 1;
+  padding: 20px;
+  width: 500px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -10px 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: black;
+  color: white;
+  /* border-left: 4px solid black; */
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.cloud-sol-content{
+  font-size: var(--p-font);
+  padding: 20px;
+  width: 500px;
+  border: 1px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+  box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.5);
+
+}
+.cloud-sol-pic{
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.technology-box-2{
+  margin-top: 100px;
+  display: flex;
+  color: black;
+  column-gap: 60px;
+  justify-content: center;
+}
+.SAP h1{
+  font-size: var(--p-font);
+  flex: 1;
+  padding: 20px;
+  width: 500px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  margin-bottom: 12px;
+}
+.SAP-content{
+  font-size: var(--p-font);
+  padding: 20px;
+  width: 500px;
+  border: 1px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.5);
+
+}
+.SAP-pic{
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.maximo h1{
+  font-size: var(--p-font);
+  flex: 1;
+  padding: 20px;
+  width: 500px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  margin-bottom: 12px;
+}
+.maximo-content{
+  font-size: var(--p-font);
+  padding: 20px;
+  width: 500px;
+  border: 1px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.5);
+
+}
+.maximo-pic{
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.technology-box-3{
+  margin-top: 100px;
+  display: flex;
+  color: black;
+  column-gap: 60px;
+  justify-content: center;
+}
+.oracle h1{
+  font-size: var(--p-font);
+  flex: 1;
+  padding: 20px;
+  width: 500px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  margin-bottom: 12px;
+}
+.oracle-content{
+  font-size: var(--p-font);
+  padding: 20px;
+  width: 500px;
+  border: 1px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.5);
+
+}
+.oracle-pic{
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.CRM h1{
+  font-size: var(--p-font);
+  flex: 1;
+  padding: 20px;
+  width: 500px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  margin-bottom: 12px;
+}
+.CRM-content{
+  font-size: var(--p-font);
+  padding: 20px;
+  width: 500px;
+  border: 1px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.5);
+
+}
+.CRM-pic{
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.technology-box-4{
+  margin-top: 100px;
+  display: flex;
+  color: black;
+  column-gap: 60px;
+  justify-content: center;
+}
+.o365 h1{
+  font-size: var(--p-font);
+  flex: 1;
+  padding: 20px;
+  width: 500px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  margin-bottom: 12px;
+}
+.o365-content{
+  font-size: var(--p-font);
+  padding: 20px;
+  width: 500px;
+  border: 1px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.5);
+
+}
+.o365-pic{
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.RPA h1{
+  font-size: var(--p-font);
+  flex: 1;
+  padding: 20px;
+  width: 500px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  margin-bottom: 12px;
+}
+.RPA-content{
+  font-size: var(--p-font);
+  padding: 20px;
+  width: 500px;
+  border: 1px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.5);
+
+}
+.RPA-pic{
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+/* ----------------------FOOTER DESIGN--------------------- */
+.footer{
+text-align: center;
+margin-top: 150px;
+position: relative;
+
+}
+.footer-box{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+column-gap: 50px;
+margin: 0 auto;
+margin-left: 150px;
+}
+.footer1 h1{
+color: rgb(0, 0, 0);
+text-align: left;
+font-weight: 100;
+font-size: 15px
+}
+.footer1 p{
+/* margin-left: 50px; */
+text-align: left;
+font-size: 12px;
+line-height: 25px;
+color: rgb(27, 112, 217);
+}
+.footer2 h2{
+color: rgb(0, 0, 0);
+text-align: left;
+font-weight: 100;
+font-size: 15px
+}
+.footer2 p{
+/* margin-left: 50px; */
+text-align: left;
+font-size: 12px;
+line-height: 30px;
+color: rgb(27, 112, 217);
+}
+.footer3 h3{
+color: rgb(0, 0, 0);
+text-align: left;
+font-weight: 100;
+font-size: 15px
+}
+.footer-help{
+/* margin-left: 50px; */
+text-align: left;
+font-size: 12px;
+line-height: 40px;
+color: rgb(27, 112, 217);
+}
+.footer-rights{
+color: rgb(0, 0, 0);
+position: absolute;
+font-size: 12px;
+bottom: 0;
+right: 0;
+padding: 10px;
+}
+
+/* -------------------- POLYGON SERVICES --------------------- */
+.polygon-services{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 100px;
+  flex: 1;
+}
+.polygon-content h1 {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  margin-bottom: -20px;
+  margin-top: 75px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #010101;
+}
+.polygon-content h1::before,
+.polygon-content h1::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 120px;
+  height: 2px;
+  line-height: 1.2;
+  background-color: #000000; /* Change the color as needed */
+}
+
+.polygon-content h1::before {
+  left: -150px;
+}
+.polygon-content h1::after {
+  right: -150px;
+}
+.polygon-box{
+  margin-top: 100px;
+  margin-left: 100px;
+  display: flex;
+  color: black;
+  column-gap: 60px;
+  justify-content: center;
+}
+.polygon-services-pic{
+  z-index: 1;
+}
+.asset-maintenance-box{
+  position: relative;
+  display: inline-block;
+  background-color: #000;
+  z-index: 9999;
+}
+/* .asset-maintenance-button{
+  background-color: #000;
+  z-index: 9999;
+} */

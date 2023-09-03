@@ -1,0 +1,430 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+:root{
+  --text-color: #fff;
+  --bg-color: #000;
+  --main-color: #4378ff;
+  --head-color: #f59d22;
+
+  --h1-font: 3rem;
+  --h2-font: 1rem;
+  --p-font: 1rem;
+}
+body{
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+header{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  background: transparent;
+  padding: 27px 17%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .50s ease;
+}
+/* .logo_half{
+  width: 10%;
+  height: 10%;
+} */
+.navbar{
+  display: flex;
+}
+.navbar a{
+  color: var(--text-color);
+  font-size: var(--p-font);
+  font-weight: 700;
+  margin: 15px 22px;
+  transition: all .50s ease;
+}
+.navbar a:hover{
+  color: var(--main-color);
+}
+.navbar li:hover{
+  color: var(--main-color);
+  transform: translateY(-3px);
+  transition: all .50s ease;
+}
+#navbar-home a{
+  color: rgb(255, 0, 17);
+}
+.h-right{
+  display: flex;
+  align-items: center;
+}
+.h-right a:first-child{
+  color: var(--text-color);
+  font-size: var(--p-font);
+  margin-right: 20px;
+}
+.h-right a{
+  vertical-align: middle;
+  font-size: 20px;
+  color: var(--text-color);
+  margin-right: 18px;
+  margin-left: 5px;
+  transition: all .50s ease;
+}
+.h-right a:hover{
+  color: var(--main-color);
+  transform: translateY(-3px);
+}
+#menu-icon{
+  color: var(--text-color);
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+.logo{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 30px;
+  margin-top: 100px;
+}
+section{
+  padding: 70px 17% 60px;
+}
+.home{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to left, rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/mountain-gradient.png);
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.home-text h1{
+  font-size: 30px;
+  font-weight: 1000;
+  margin-bottom: 5px;
+  letter-spacing: 6px;
+  color: var(--head-color);
+}
+.home-text h5{
+  font-size: var(--h2-font);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 50px;
+}
+.home-text p{
+  margin-bottom: 60px;
+}
+.GetStarted{
+ width: 200px;
+ padding: 15px 0;
+ text-align: center;
+ margin: 20px 10px;
+ border-radius: 28px;
+ font-weight: bold;
+ border: 2px solid rgb(234, 22, 22);
+ background: transparent;
+ color: rgb(234, 22, 22);
+ text-transform: uppercase;
+ cursor: pointer;
+ position: relative;
+ overflow: hidden;
+ transition: 0.5s;
+ z-index: 2;
+}
+.span-GetStarted{
+  background: rgb(234, 22, 22);
+  height: 100%;
+  width: 0%;
+  border-radius: 23px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+.GetStarted:hover span{
+  width: 100%;
+}
+.GetStarted:hover{
+  color: white;
+}
+.GetStarted:active span{
+  background: rgb(151, 13, 13);
+}
+.GetStarted:active{
+  border: 2px solid rgb(151, 13, 13);
+}
+header.sticky{
+  padding: 15px 17%;
+  background: transparent;
+  backdrop-filter: blur(35px);
+}
+/* -----------------MISSION DESIGN--------------- */
+.mission{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.mission-columns{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  margin-top: 100px;
+}
+.mission-right h1{
+  font-size: 35px;
+  letter-spacing: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--head-color);
+}
+.mission-right h2{
+  font-weight: 50;
+  /* text-decoration: underline; */
+}
+.mission-text1{
+  margin-top: 50px;
+  line-height: 40px;
+}
+.mission-text2{
+  margin-top: 30px;
+  line-height: 40px;
+}
+.mission-L-pics{
+  margin-top: 20px;
+  margin-left: 300px;
+}
+.mission-L-01{
+  border-radius: 50px;
+  margin-left: 50px;
+}
+.mission-L-02{
+  border-radius: 50px;
+  margin-left: 50px;
+}
+
+
+/* -----------------SERVICES DESIGN------------------ */
+.services{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 150px;
+}
+.services-columns{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 300px;
+  margin-top: 100px;
+}
+.services-content h1{
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 6px;
+  color: var(--head-color);
+  text-transform: uppercase;
+  /* maring-top: 100px; */
+}
+/* .services-left{
+
+} */
+.services-left h3{
+  background: rgb(79, 53, 151);
+  border-radius: 10px;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.services-left p{
+  border: 2px solid rgb(226, 168, 11);
+  padding: 10px 50px;
+  text-align: left;
+  margin-top: 30px;
+  line-height: 50px;
+}
+/* .services-right{
+
+} */
+.services-right h4{
+  background: rgb(79, 53, 151);
+  border-radius: 10px;
+  padding: 17px;
+  text-transform: uppercase;
+}
+.services-right p{
+  border: 2px solid rgb(226, 168, 11);
+  padding: 10px 50px;
+  text-align: left;
+  margin-top: 30px;
+  line-height: 50px;
+}
+.find-out-more{
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  margin-top: 100px;
+  border-radius: 28px;
+  font-weight: bold;
+  border: 2px solid rgb(207, 100, 24);
+  background: transparent;
+  color: rgb(207, 100, 24);
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 2;
+ }
+ .span-find-out-more{
+   background: rgb(207, 100, 24);
+   height: 100%;
+   width: 0%;
+   border-radius: 23px;
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   z-index: -1;
+   transition: 0.5s;
+ }
+ .find-out-more:hover span{
+   width: 100%;
+ }
+ .find-out-more:hover{
+   color: white;
+ }
+ .find-out-more:active span{
+   background: rgb(207, 100, 24);
+ }
+ .find-out-more:active{
+   border: 2px solid rgb(207, 100, 24);
+ }
+
+/* ----------------------PRESENCE DESIGN--------------------- */
+.presence{
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+}
+.presence-content h1{
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 6px;
+  color: var(--head-color);
+  text-transform: uppercase;
+  /* maring-top: 100px; */
+}
+.presence-rows{
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.presence-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.presence-column {
+  flex: 1;
+  padding: 50px;
+  text-align: center;
+}
+.toronto-pic{
+  border-radius: 10px;
+}
+.pakistan-pic{
+  border-radius: 10px;
+}
+
+
+ /* ----------------------FOOTER DESIGN--------------------- */
+ .footer{
+  text-align: center;
+  margin-top: 150px;
+  position: relative;
+
+ }
+ .footer-box{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: 50px;
+  margin: 0 auto;
+  margin-left: 150px;
+ }
+ .footer1 h1{
+  text-align: left;
+  font-weight: 100;
+  font-size: 15px
+ }
+ .footer1 p{
+  /* margin-left: 50px; */
+  text-align: left;
+  font-size: 12px;
+  line-height: 25px;
+  color: rgb(27, 112, 217);
+ }
+ .footer2 h2{
+  text-align: left;
+  font-weight: 100;
+  font-size: 15px
+ }
+ .footer2 p{
+  /* margin-left: 50px; */
+  text-align: left;
+  font-size: 12px;
+  line-height: 30px;
+  color: rgb(27, 112, 217);
+ }
+ .footer3 h3{
+  text-align: left;
+  font-weight: 100;
+  font-size: 15px
+ }
+ .footer-help{
+  /* margin-left: 50px; */
+  text-align: left;
+  font-size: 12px;
+  line-height: 40px;
+  color: rgb(27, 112, 217);
+ }
+ .footer-rights{
+  color: white;
+  position: absolute;
+  font-size: 12px;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+ }
