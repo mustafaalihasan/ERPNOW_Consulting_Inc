@@ -8,6 +8,7 @@
   outline: none;
   scroll-behavior: smooth;
   font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 :root{
   --text-color: #fff;
@@ -93,6 +94,10 @@ header{
   z-index: 10001;
   display: none;
 }
+
+/* -------------------------SERVICES DESIGN ---------------------- */
+/* --------------------------------------------------------------- */
+
 .SERVICES{
   position: relative;
   height: 100vh;
@@ -692,65 +697,77 @@ header{
 
 /* ----------------------FOOTER DESIGN--------------------- */
 .footer{
-text-align: center;
-margin-top: 150px;
-position: relative;
-
-}
-.footer-box{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-column-gap: 50px;
-margin: 0 auto;
-margin-left: 150px;
-}
-.footer1 h1{
-color: rgb(0, 0, 0);
-text-align: left;
-font-weight: 100;
-font-size: 15px
-}
-.footer1 p{
-/* margin-left: 50px; */
-text-align: left;
-font-size: 12px;
-line-height: 25px;
-color: rgb(27, 112, 217);
-}
-.footer2 h2{
-color: rgb(0, 0, 0);
-text-align: left;
-font-weight: 100;
-font-size: 15px
-}
-.footer2 p{
-/* margin-left: 50px; */
-text-align: left;
-font-size: 12px;
-line-height: 30px;
-color: rgb(27, 112, 217);
-}
-.footer3 h3{
-color: rgb(0, 0, 0);
-text-align: left;
-font-weight: 100;
-font-size: 15px
-}
-.footer-help{
-/* margin-left: 50px; */
-text-align: left;
-font-size: 12px;
-line-height: 40px;
-color: rgb(255, 255, 255);
-}
-.footer-rights{
-color: rgb(0, 0, 0);
-position: absolute;
-font-size: 12px;
-bottom: 0;
-right: 0;
-padding: 10px;
-}
+  text-align: center;
+  margin-top: 150px;
+  position: relative;
+  background-color: #BABABA;
+ }
+ .footer-box{
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+  column-gap: 50px;
+  margin: 0 auto;
+  max-width: 800px;
+ }
+ .footer1{
+  margin-left: 150px;
+ }
+ .footer1 h1{
+  text-align: left;
+  font-weight: 100;
+  font-size: 15px;
+  color: black;
+ }
+ .footer1 p{
+  /* margin-left: 50px; */
+  text-align: left;
+  font-size: 12px;
+  line-height: 25px;
+  color: rgb(27, 112, 217);
+ }
+ .footer2{
+  margin-left: 150px;
+  width: 100%;
+ }
+ .footer2 h2{
+  text-align: left;
+  font-weight: 100;
+  font-size: 15px;
+  color: black;
+ }
+ .footer2 p{
+  /* margin-left: 50px; */
+  text-align: left;
+  font-size: 12px;
+  line-height: 30px;
+  color: rgb(27, 112, 217);
+ }
+ .footer3{
+  margin-left: 150px;
+  width: 100%;
+ }
+ .footer3 h3{
+  text-align: left;
+  font-weight: 100;
+  font-size: 15px;
+  color: black;
+ }
+ .footer-help{
+  /* margin-left: 50px; */
+  text-align: left;
+  font-size: 12px;
+  line-height: 40px;
+  color: rgb(27, 112, 217);
+ }
+ .footer-rights{
+  color: rgb(0, 0, 0);
+  position: absolute;
+  font-size: 12px;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+ }
 
 /* -------------------- POLYGON SERVICES --------------------- */
 .polygon-services{

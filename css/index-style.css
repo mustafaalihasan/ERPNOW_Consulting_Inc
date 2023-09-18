@@ -11,8 +11,8 @@
   font-family: 'Poppins', sans-serif;
 }
 :root{
-  --text-color: #fff;
-  --bg-color: #000;
+  --text-color: #000000;
+  --bg-color: #040707;
   --main-color: #4378ff;
   --head-color: #f59d22;
 
@@ -22,7 +22,7 @@
 }
 body{
   color: var(--text-color);
-  background: var(--bg-color);
+  background: #D7D8D8;
 }
 header{
   position: fixed;
@@ -30,7 +30,7 @@ header{
   right: 0;
   z-index: 1000;
   width: 100%;
-  background: transparent;
+  background: #BABABA;
   padding: 27px 17%;
   display: flex;
   align-items: center;
@@ -45,7 +45,7 @@ header{
   display: flex;
 }
 .navbar a{
-  color: var(--text-color);
+  color: black;
   font-size: var(--p-font);
   font-weight: 700;
   margin: 15px 22px;
@@ -67,7 +67,7 @@ header{
   align-items: center;
 }
 .h-right a:first-child{
-  color: var(--text-color);
+  color: black;
   font-size: var(--p-font);
   margin-right: 20px;
 }
@@ -90,11 +90,19 @@ header{
   z-index: 10001;
   display: none;
 }
-.logo{
+.logo-container{
+  position: relative;
   width: 100%;
   height: 100%;
+}
+.logo{
   margin-bottom: 30px;
   margin-top: 100px;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+.logo.show{
+  opacity: 1;
 }
 section{
   padding: 70px 17% 60px;
@@ -103,7 +111,7 @@ section{
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: linear-gradient(to left, rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/mountain-gradient.png);
+  background-image: linear-gradient(to left, rgba(0,0,0,0),rgba(0,0,0,0)), url(../img/home01-01.png);
   background-size: cover;
   background-position: bottom center;
   display: flex;
@@ -111,18 +119,40 @@ section{
   justify-content: center;
   text-align: center;
 }
+.home-text{
+  position: relative;
+}
 .home-text h1{
   font-size: 30px;
   font-weight: 1000;
   margin-bottom: 5px;
   letter-spacing: 6px;
   color: var(--head-color);
+  white-space: nowrap;
+  animation: slideText 0.5s linear;
+}
+@keyframes slideText {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 .home-text h5{
   font-size: var(--h2-font);
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 50px;
+  animation: slideText01 0.5s linear;
+}
+@keyframes slideText01 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 .home-text p{
   margin-bottom: 60px;
@@ -143,6 +173,7 @@ section{
  overflow: hidden;
  transition: 0.5s;
  z-index: 2;
+ -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
 }
 .span-GetStarted{
   background: rgb(234, 22, 22);
@@ -175,28 +206,35 @@ header.sticky{
 /* -----------------MISSION DESIGN--------------- */
 .mission{
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
   background-size: cover;
   background-position: bottom center;
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
 }
 .mission-columns{
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  margin-top: 100px;
+  position: relative;
+  justify-content: center;
 }
-.mission-right h1{
-  font-size: 35px;
-  letter-spacing: 8px;
-  font-family: 'Montserrat', sans-serif;
+.mission-box{
+  align-items: center;
+  justify-content: center;
+}
+.mission-box h1{
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 6px;
   color: var(--head-color);
+  text-transform: uppercase;
 }
-.mission-right h2{
-  font-weight: 50;
-  /* text-decoration: underline; */
+.mission-content{
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .mission-text1{
   margin-top: 50px;
@@ -207,16 +245,19 @@ header.sticky{
   line-height: 40px;
 }
 .mission-L-pics{
-  margin-top: 20px;
-  margin-left: 300px;
+  margin-top: 50px;
 }
 .mission-L-01{
-  border-radius: 50px;
+  border-radius: 10px;
+  border: 2px solid black;
   margin-left: 50px;
+  margin: 0, auto;
 }
 .mission-L-02{
-  border-radius: 50px;
+  border-radius: 10px;
+  border: 2px solid black;
   margin-left: 50px;
+  margin: 0, auto;
 }
 
 
@@ -230,7 +271,7 @@ header.sticky{
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 150px;
+  /* margin-top: 150px; */
 }
 .services-columns{
   display: grid;
@@ -251,13 +292,17 @@ header.sticky{
 
 } */
 .services-left h3{
-  background: rgb(79, 53, 151);
+  background: rgb(41, 41, 41);
   border-radius: 10px;
   padding: 5px;
   text-transform: uppercase;
+  color: #ffffff;
 }
 .services-left p{
-  border: 2px solid rgb(226, 168, 11);
+  /* border: 2px solid rgb(41, 41, 41); */
+  background-color: #cecece;
+  border-radius: 10px;
+
   padding: 10px 50px;
   text-align: left;
   margin-top: 30px;
@@ -267,13 +312,17 @@ header.sticky{
 
 } */
 .services-right h4{
-  background: rgb(79, 53, 151);
+  background: rgb(41, 41, 41);
   border-radius: 10px;
-  padding: 17px;
+  padding: 20px;
   text-transform: uppercase;
+  color: #ffffff;
 }
 .services-right p{
-  border: 2px solid rgb(226, 168, 11);
+  /* border: 2px solid rgb(41, 41, 41); */
+  background-color: #cecece;
+  border-radius: 10px;
+
   padding: 10px 50px;
   text-align: left;
   margin-top: 30px;
@@ -287,9 +336,9 @@ header.sticky{
   margin-top: 100px;
   border-radius: 28px;
   font-weight: bold;
-  border: 2px solid rgb(207, 100, 24);
+  border: 2px solid rgb(21, 0, 143);
   background: transparent;
-  color: rgb(207, 100, 24);
+  color: rgb(21, 0, 143);
   text-transform: uppercase;
   cursor: pointer;
   position: relative;
@@ -298,7 +347,7 @@ header.sticky{
   z-index: 2;
  }
  .span-find-out-more{
-   background: rgb(207, 100, 24);
+   background: rgb(21, 0, 143);
    height: 100%;
    width: 0%;
    border-radius: 23px;
@@ -315,14 +364,14 @@ header.sticky{
    color: white;
  }
  .find-out-more:active span{
-   background: rgb(207, 100, 24);
+   background: rgb(21, 0, 143);
  }
  .find-out-more:active{
-   border: 2px solid rgb(207, 100, 24);
+   border: 2px solid rgb(21, 0, 143);
  }
 
-/* ----------------------PRESENCE DESIGN--------------------- */
-.presence{
+/* ----------------------Clients DESIGN--------------------- */
+.clients{
   position: relative;
   width: 100%;
   background-size: cover;
@@ -330,9 +379,9 @@ header.sticky{
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 150px;
 }
-.presence-content h1{
+.clients-content h1{
   font-size: 30px;
   font-weight: 800;
   margin-bottom: 20px;
@@ -341,33 +390,135 @@ header.sticky{
   text-transform: uppercase;
   /* maring-top: 100px; */
 }
-.presence-rows{
-  width: 100%;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
-.presence-row {
+.clients-box{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  margin-top: 100px;
+  column-gap: 60px;
+}
+.pennWest{
+  flex: 1;
+  width: 300px;
+  height: 200px;
+  /* background-color: #c0bfbf; */
+  border: 2px solid black;
+  padding: 60px;
+  transition: 0.2s linear box-shadow;
+  cursor: pointer;
+  transform: rotate(0deg) translateY(0px);
+}
+.pennWest:hover{
+  box-shadow: 0 35px 60px -15px rgba(0,0,0,0.4);
+  animation: PENNfloat infinite 1.5s linear;
+}
+@keyframes PENNfloat{
+  from{
+    transform: rotate(0deg) translateY(-10px) rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg) translateY(-10px) rotate(-360deg)
+  }
+}
+.accenture{
+  flex: 1;
+  width: 300px;
+  height: 200px;
+  /* background-color: #c0bfbf; */
+  border: 2px solid black;
+  padding: 60px;
+  object-fit: cover;
+  transition: 0.2s linear box-shadow;
+  cursor: pointer;
+  transform: rotate(0deg) translateY(0px);
+}
+.accenture:hover{
+  box-shadow: 0 35px 60px -15px rgba(0,0,0,0.4);
+  animation: ACCfloat infinite 1.5s linear;
+}
+@keyframes ACCfloat{
+  from{
+    transform: rotate(0deg) translateY(-10px) rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg) translateY(-10px) rotate(-360deg)
+  }
+}
+.enbridge{
+  flex: 1;
+  width: 300px;
+  height: 200px;
+  /* background-color: #c0bfbf; */
+  border: 2px solid black;
+  padding: 60px;
+  transition: 0.2s linear box-shadow;
+  cursor: pointer;
+  transform: rotate(0deg) translateY(0px);
+}
+.enbridge:hover{
+  box-shadow: 0 35px 60px -15px rgba(0,0,0,0.4);
+  animation: ENBRIDGEfloat infinite 1.5s linear;
+}
+@keyframes ENBRIDGEfloat{
+  from{
+    transform: rotate(0deg) translateY(-10px) rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg) translateY(-10px) rotate(-360deg)
+  }
+}
+.clients-box-02{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 60px;
+}
+.nexen{
+  width: 300px;
+  height: 200px;
+  /* background-color: #c0bfbf; */
+  border: 2px solid black;
+  padding: 60px;
+  margin-top: 50px;
+  transition: 0.2s linear box-shadow;
+  cursor: pointer;
+  transform: rotate(0deg) translateY(0px);
+}
+.nexen:hover{
+  box-shadow: 0 35px 60px -15px rgba(0,0,0,0.4);
+  animation: NEXfloat infinite 1.5s linear;
+}
+@keyframes NEXfloat{
+  from{
+    transform: rotate(0deg) translateY(-10px) rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg) translateY(-10px) rotate(-360deg)
+  }
+}
+.transit{
+  width: 300px;
+  height: 200px;
+  /* background-color: #c0bfbf; */
+  border: 2px solid black;
+  padding: 60px;
+  margin-top: 50px;
+  transition: 0.2s linear box-shadow;
+  cursor: pointer;
+  transform: rotate(0deg) translateY(0px);
+}
+.transit:hover{
+  box-shadow: 0 35px 60px -15px rgba(0,0,0,0.4);
+  animation: TRANSITfloat infinite 1.5s linear;
+}
+@keyframes TRANSITfloat{
+  from{
+    transform: rotate(0deg) translateY(-10px) rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg) translateY(-10px) rotate(-360deg)
+  }
 }
 
-.presence-column {
-  flex: 1;
-  padding: 50px;
-  text-align: center;
-}
-.toronto-pic{
-  border-radius: 10px;
-}
-.pakistan-pic{
-  border-radius: 10px;
-}
 
 
  /* ----------------------FOOTER DESIGN--------------------- */
@@ -375,6 +526,7 @@ header.sticky{
   text-align: center;
   margin-top: 150px;
   position: relative;
+  background-color: #BABABA;
 
  }
  .footer-box{
@@ -421,7 +573,7 @@ header.sticky{
   color: rgb(27, 112, 217);
  }
  .footer-rights{
-  color: white;
+  color: rgb(0, 0, 0);
   position: absolute;
   font-size: 12px;
   bottom: 0;

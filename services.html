@@ -16,6 +16,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+    
+    <!-- js script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery.maphilight.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/script.js"></script>
 
   </head>
   <body>
@@ -32,8 +38,9 @@
         <ul class="navbar">
           <li id="navbar-home"><a href="index.html">Home</a></li>
           <li id="navbar-services"><a href="services.html">Services</a></li>
-          <li><a href="#">Methodology</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li id="navbar-methodology"><a href="methodology.html">Methodology</a></li>
+          <li id="navbar-about"><a href="#">About</a></li>
+          <li id="navbar-contact"><a href="contact-us.html">Contact Us</a></li>
         </ul>
 
         <div class="h-right">
@@ -132,9 +139,32 @@
             <div class="polygon-box">
               <img src="img/polygon-services.png" usemap="#image_map" class="polygon-services-pic">
               <map name="image_map">
-              <area class="asset-maintenance-button" alt="asset-maintenance" title="asset-maintenance" target="_blank" href="asset-maintenance.html" coords="27,406 93,407 119,459 93,509 27,510 2,460 " shape="polygon">
+                <area alt="Asset Maintenance" title="Asset Maintenance" target="_blank" href="asset-maintenance.html" coords="29,418,96,418,123,470,97,521,29,522,3,469 " shape="polygon">
+                <area alt="Asset Planning & Procurement" title="Asset Planning & Procurement" target="_blank" href="asset-planning.html" coords="120,365,188,365,214,418,188,470,121,470,95,418 " shape="polygon">
+                <area alt="Accounts Payable" title="Accounts Payable" target="_blank" href="accounts-payable.html" coords="122,262,189,263,216,314,190,366,122,366,96,313 " shape="polygon">
+                <area alt="Spend Visibility" title="Spend Visibility" target="_blank" href="spend-visibility.html" coords="215,313,283,313,309,366,283,418,216,418,190,366 " shape="polygon">            
+                <area alt="Strategic Sourcing" title="Strategic Sourcing" target="_blank" href="strategic-sourcing.html" coords="28,211,95,212,122,263,96,314,28,315,2,262 " shape="polygon">
+                <area alt="Contract Management" title="Contract Management" target="_blank" href="contract-management.html" coords="216,208,284,208,309,262,284,313,216,313,191,262 " shape="polygon">
+                <area alt="Direct Procurement" title="Direct Procurement" target="_blank" href="direct-procurement.html" coords="26,105,94,106,120,157,95,208,26,209,1,156 " shape="polygon">
+                <area alt="Supplier Management" title="Supplier Management" target="_blank" href="supplier-management.html" coords="121,158,189,158,215,212,189,263,122,263,96,212 " shape="polygon">
+                <area alt="Commodity Risk" title="Commodity Risk" target="_blank" href="commodity-risk.html" coords="121,53,189,55,215,107,190,158,121,158,95,106 " shape="polygon">
+                <area alt="Financial Accounting" title="Financial Accounting" target="_blank" href="financial-accounting.html" coords="310,54,378,55,404,106,378,157,310,158,285,105 " shape="polygon">
+                <area alt="Indirect Procurement" title="Indirect Procurement" target="_blank" href="indirect-procurement.html" coords="216,105,284,105,309,159,284,210,216,210,191,159 " shape="polygon">
+                <area alt="Productivity Tracking" title="Productivity Tracking" target="_blank" href="productivity-tracking.html" coords="215,0,283,2,309,54,284,105,215,105,189,53 " shape="polygon">
+                <area alt="Fixed Assets" title="Fixed Assets" target="_blank" href="fixed-assets.html" coords="403,2,471,2,497,54,471,105,403,106,378,53 " shape="polygon">
+                <area alt="Treasury Cash" title="Treasury Cash" target="_blank" href="treasury-cash.html" coords="402,105,471,105,496,159,471,210,403,210,378,159 " shape="polygon">
+                <area alt="Financial Planning & Analysis" title="Financial Planning & Analysis" target="_blank" href="financial-planning.html" coords="309,157,378,159,403,211,378,262,309,262,284,210 " shape="polygon">
+                <area alt="Product Costing" title="Product Costing" target="_blank" href="product-costing.html" coords="497,52,564,53,591,104,565,156,497,156,471,103 " shape="polygon">
+                <area alt="Project Accounting" title="Project Accounting" target="_blank" href="project-accounting.html" coords="495,156,564,156,589,209,564,261,496,261,471,209 " shape="polygon">
+                <area alt="Tax" title="Tax" target="_blank" href="tax.html" coords="402,208,471,209,496,261,471,313,402,313,377,261 " shape="polygon">
+                <area alt="Quality Management" title="Quality Management" target="_blank" href="quality-management.html" coords="683,53,750,54,777,105,751,156,683,157,657,104 " shape="polygon">
+                <area alt="EH&S" title="EH&S" target="_blank" href="eh&s.html" coords="588,105,657,105,682,159,657,210,589,210,564,159 " shape="polygon">
+                <area alt="Product Planning" title="Product Planning" target="_blank" href="product-planning.html" coords="588,208,657,210,682,262,657,313,588,313,563,261 " shape="polygon">
+                <area alt="Utility Management" title="Utility Management" target="_blank" href="utility-management.html" coords="777,104,844,105,871,156,845,208,777,208,751,156 " shape="polygon">
+                <area alt="Warehouse Operations" title="Warehouse Operations" target="_blank" href="warehouse-operations.html" coords="682,156,750,156,776,210,750,261,683,261,657,210 " shape="polygon">
+                <area alt="Production" title="Production" target="_blank" href="production.html" coords="777,208,845,210,871,262,846,313,777,313,751,261 " shape="polygon">
               </map>
-              <img src="img/" class="asset-maintenance-overlay">
+              <!-- <img src="img/" class="asset-maintenance-overlay"> -->
 
             </div>
           </div>
@@ -294,8 +324,7 @@
       </section>
 
       
-      <!-- js script -->
-      <script src="js/script.js"></script>
+
 
   </body>
 

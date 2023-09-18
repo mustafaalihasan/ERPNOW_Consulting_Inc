@@ -8,6 +8,8 @@
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="css/index-style.css">
 
+    
+
     <!-- boxicons link -->
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -18,12 +20,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Poppins&display=swap" rel="stylesheet">
 
+    <!-- js script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery.maphilight.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/script.js"></script>
+
 
 </head>
 <body>
 
     <!-- header design -->
-    <header>
+    <header class="index-header">
       <div>
         <a href="index.html">
           <img src="img/logo_half01.png" class="logo_half">
@@ -34,8 +42,9 @@
       <ul class="navbar">
         <li id="navbar-home"><a href="index.html">Home</a></li>
         <li id="navbar-services"><a href="services.html">Services</a></li>
-        <li><a href="#">Methodology</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li id="navbar-methodology"><a href="methodology.html">Methodology</a></li>
+        <li id="navbar-about"><a href="#">About</a></li>
+        <li id="navbar-contact"><a href="contact-us.html">Contact Us</a></li>
       </ul>
 
       <div class="h-right">
@@ -48,12 +57,14 @@
     <!-- home section design -->
     <section class="home">
         <div class="home-text">
-          <img src="img/logo.png" class="logo">
+          <div class="logo-container">
+            <img src="img/logo.png" class="logo">
+          </div>
 
           <h1>ERPNOW Consulting Inc.</h1>
           <h5>Robotics, Maximo, Oracle, SAP, Intelligent Automation</h5>
           <p>Successfully delivering on customer's future growth. <br><br>
-            We are customer's partner in <br> strategic and tactical plans</p>
+            We are customer's partner in <br> strategic and tactical plans.</p>
 
           <button class="GetStarted"><span class="span-GetStarted"></span>
             Get Started
@@ -64,21 +75,18 @@
     <!-- mission design -->
     <section class="mission">
         <div class="mission-box">
+          <h1>Our Mission</h1>
+          <h2>What We Strive For</h2>
           <div class="mission-columns">
-            <div class="mission-left">
-              <img src="img/mission01-01.png" class="mission-pic">
-            </div>
-            <div class="mission-right">
-              <h1>Our Mission</h1>
-              <h2>What We Strive For</h2>
-              <p class="mission-text1">At ERPNOW Solutions Inc., we provide our clients with <br>
-                unique services in building strategy, improving business <br>
-                processes and implementing technology solutions to our <br>
+            <div class="mission-content">
+              <p class="mission-text1">At ERPNOW Solutions Inc., we provide our clients with 
+                unique services in building strategy, improving business 
+                processes and implementing technology solutions to our 
                 clients in order to resolve the toughest challenges.
               </p>
-              <p class="mission-text2">With expertise in Oil & Gas, Utilities and Power <br>
-                Generation industries and all business functions, <br>
-                we deliver transformational results for a demanding <br>
+              <p class="mission-text2">With expertise in Oil & Gas, Utilities and Power
+                Generation industries and all business functions, 
+                we deliver transformational results for a demanding 
                 digital workspace.
               </p>
             </div>
@@ -125,40 +133,28 @@
         </div>
     </section>
 
-     <!-- presence design -->
-     <section class="presence">
-      <div class="presence-content">
-        <h1>Our Presence</h1>
-        <div class="presence-rows">
-          <div class="presence-row">
-            <div class="presence-column">
-              <p>We operate in Toronto, Canada <br>
-                and have a registered office at: <br>
-                Address. <br>
-                Street. <br>
-                ZIP CODE
-              </p>
-            </div>
-            <div class="presence-column">
-              <img src="img/toronto-01.jpg" class="toronto-pic">
-            </div>
-          </div>
-          <div class="presence-row">
-            <div class="presence-column">
-              <img src="img/pakistan-01.jpg" class="pakistan-pic">
-            </div>
-            <div class="presence-column">
-              <p>We operate in Pakistan<br>
-                and have a registered office at: <br>
-                Address. <br>
-                Street. <br>
-                ZIP CODE
-              </p>
-            </div>
-          </div>
+
+
+
+     <!-- clients design -->
+     <section class="clients">
+      <div class="clients-content">
+        <h1>Our Clients</h1>
+        <h2>Who We Serve</h2>
+        <div class="clients-box">
+          <img src="img/pennWest.png" class="pennWest">
+          <img src="img/accenture.png" class="accenture">
+          <img src="img/enbridge.png" class="enbridge">
+        </div>
+        <div class="clients-box-02">
+          <img src="img/nexen.png" class="nexen">
+          <img src="img/transit.png" class="transit">
         </div>
       </div>
     </section>
+
+
+
     <!-- footer design -->
     <section class="footer">
       <div class="footer-box">
@@ -195,8 +191,7 @@
       </div>
     </section>
 
-    <!-- js script -->
-    <script src="js/script.js"></script>
+
 
 </body>
 
