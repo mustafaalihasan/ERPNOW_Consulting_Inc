@@ -25,8 +25,6 @@ body{
   background: white;
   display: flex;
   flex-direction: column;
-  background-position: top center;
-  background-size: cover;
   background-image: linear-gradient(to left, rgba(0,0,0,0),rgba(0,0,0,0)), url(../img/polygon-scatter-haikei\ \(1\).svg);
 
 }
@@ -65,7 +63,7 @@ header{
   transform: translateY(-3px);
   transition: all .50s ease;
 }
-#navbar-contact a{
+#navbar-about a{
   color: rgb(255, 0, 17);
 }
 .h-right{
@@ -97,11 +95,9 @@ header{
   display: none;
 }
 
+/* --------------------------MEET THE TEAM DESIGN------------------------- */
 
-/* ---------------- PRESENCE DESIGN ----------------- */
-/* ----------------------------------------------------- */
-
-.PRESENCE{
+.TEAM{
   position: relative;
   height: 100vh;
   width: 100%;
@@ -114,7 +110,7 @@ header{
   margin-top: 200px;
   flex: 1;
 }
-.presence-container h1{
+.team-container h1{
   font-size: 40px;
   font-weight: 1000;
   margin-bottom: 10px;
@@ -122,174 +118,59 @@ header{
   color: black;
   text-transform: uppercase;
 }
-.presence-container h2{
-  font-size: 20px;
-  font-weight: 1000;
-  margin-bottom: 0px;
-  letter-spacing: 3px;
-  color: black;
-}
-.world-map-container{
-  width: 100%;
-  max-width: 1200px;
+.team-content{
   position: relative;
-
-}
-.world-map-container img{
-  width: 80%;
-}
-.hotspot{
-  width: 15px;
-  height: 15px;
-  background-color: rgb(253, 38, 38);
-  border-radius: 50%;
-  position: absolute;
-  animation: wave 1s infinite;
-}
-.canada{
-  left: 24%;
-  top: 21%;
-    cursor: pointer;
-}
-.states{
-  left: 20%;
-  top: 30%;
-    cursor: pointer;
-}
-.uk{
-  left: 46%;
-  top: 23%;
-    cursor: pointer;
-}
-.pakistan{
-  right: 35%;
-  top: 38%;
-    cursor: pointer;
-}
-
-@keyframes wave{
-  from{
-    box-shadow: 0 0 0 0 rgb(253, 38, 38);
-  }
-  to{
-    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
-  }
-}
-
-.hotspot::before{
-  content: attr(text);
-  width: max-content;
-  position: absolute;
-  background-color: #fff;
-  color: #000;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 30px;
-  padding: 8px 20px;
-  font-size: 14px;
-  border-radius: 3px;
-}
-.canada::before{
-  content: attr(text);
-  width: max-content;
-  position: absolute;
-  background-color: #fff;
-  color: #000;
-  top: -350%;
-  transform: translateX(-50%);
-  padding: 8px 20px;
-  font-size: 14px;
-  border-radius: 3px;
-}
-.hotspot::after{
-  content: "";
-  border-color: transparent transparent #fff;
-  border-width: 0 8px 6px;
-  border-style: solid;
-  position: absolute;
-  top: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.canada::after{
-  content: "";
-  border-color: transparent transparent #fff;
-  border-width: 0 8px 6px;
-  border-style: solid;
-  position: absolute;
-  top: -100%;
-  left: 0;
-  transform: rotate(180deg);
-}
-
-/* ---------------------CONTACT US DESIGN------------------------ */
-
-.CONTACT-US{
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  /* background-size: cover; */
-  /* background-position: top center; */
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 30px;
-  margin-top: 100px;
-  flex: 1;
-}
-.contact-container h1{
-  font-size: 40px;
-  font-weight: 1000;
-  margin-bottom: 10px;
-  letter-spacing: 6px;
-  color: black;
-  text-transform: uppercase;
-}
-.contact-container h2{
-  font-size: 20px;
-  font-weight: 1000;
-  margin-bottom: 0px;
-  letter-spacing: 3px;
-  color: black;
-}
-.contact-box{
-  position: relative;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 100px;
 }
-form{
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  padding: 2vw 4vw;
-  width: 100%;
-  max-width: 1000px;
-  border-radius: 10px;
-  box-shadow: 0 60px 60px -15px rgba(0,0,0,0.4);
-}
-form input, form textarea{
-  border: 0;
-  margin: 10px 0;
-  padding: 20px;
-  outline: none;
-  background-color: #e0e0e0;
-  font-size: 16px;
-}
-form button{
-  padding: 15px;
-  background: #f59d22;
+.team-content h3,
+.team-content p{
   color: #000;
-  font-size: 18px;
-  border: 0;
-  outline: none;
-  cursor: pointer;
-  width: 150px;
-  margin: 20px auto 0;
-  border-radius: 30px;
+  font-weight: bold;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 20px;
 }
+.mustafa{
+  width: 20%;
+  border-radius: 750px;
+  cursor: pointer;
+  filter: brightness(100%);
+  transition: filter 0.5s ease;
+  box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.7);
+}
+.mustafa:hover{
+  filter: brightness(80%);
+  animation: spinMove 1s linear;
+}
+@keyframes spinMove{
+  0%{
+    width: 20%;
+    transform: translateY(0px);
+    transform: rotate(0deg);
+  }
+  50%{
+    width: 22%;
+    transform: translateY(-20px);
+    transform: rotate(180deg);
+  }
+  100%{
+    width: 20%;
+    transform: translateY(0px);
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 

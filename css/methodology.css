@@ -316,6 +316,14 @@ header{
   color: black;
   text-transform: uppercase;
 }
+.productivity-container h2{
+  font-size: 20px;
+  font-weight: 1000;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  color: black;
+}
 .bot{
   position: relative;
   margin: 20px;

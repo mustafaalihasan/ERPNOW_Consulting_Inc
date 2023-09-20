@@ -6,7 +6,9 @@
     <title>ERPNOW Solutions Inc.</title>
 
     <!-- css -->
-    <link rel="stylesheet" type="text/css" href="css/contact-us.css">
+    <link rel="stylesheet" type="text/css" href="css/about.css">
+
+    
 
     <!-- boxicons link -->
     <link rel="stylesheet"
@@ -16,22 +18,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
-    
-
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Poppins&display=swap" rel="stylesheet">
 
     <!-- js script -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="jquery.maphilight.js"></script>
+    <script src="js/timeline.js"></script>
     <script src="js/script.js"></script>
-  
+
 
   </head>
   <body>
 
     <!-- header design -->
-    <header>
+    <header class="index-header">
       <div>
         <a href="index.html">
           <img src="img/logo_half01.png" class="logo_half">
@@ -54,59 +54,29 @@
 
     </header>
 
-    <section class="PRESENCE">
-      <div class="presence-container">
-        <h1>Our Presence</h1>
-        <h2>Where We Operate</h2>
+    <!-- ------------------MEET THE TEAM DESIGN------------------- -->
+    <section class="TEAM">
+      <div class="team-container">
+        <h1>Meet The Team</h1>
 
-        <div class="world-map-container">
-          <img src="img/worldmap-01.png" alt="" class="worldmap-img">
-          <div class="hotspot canada" text="Toronto, Canada"></div>
-          <div class="hotspot states" text="Houston, United States"></div>
-          <div class="hotspot uk" text="London, United Kingdom"></div>
-          <div class="hotspot pakistan" text="Karachi, Pakistan"></div>
+        <div class="team-content">
+          <h3>Mustafa Ali Hasan</h3>
+          <img src="img/mustafa-01.png" class="mustafa">
+          <p>Web Developer</p>
         </div>
-
       </div>
     </section>
 
-    <section class="CONTACT-US">
-      <div class="contact-container">
-        <h1>Contact Us</h1>
-        <h2>Get In Touch With Us</h2>
-        <div class="contact-box">
-          <form onsubmit="sendEmail(); reset(); return false;">
-            <input type="text" id="name" placeholder="Enter Your Full Name" required>
-            <input type="email" id="email" placeholder="Enter Your E-mail Address" required>
-            <textarea id="message" rows="6" placeholder="Write your message..."></textarea>
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-
-      </div>
-    </section>
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-      function sendEmail(){
-                Email.send({
-            Host : "smtp.gmail.com",
-            Username : "mustali50@gmail.com",
-            Password : "qrmB6wo5pkmsT07861",
-            To : 'mustafaalihasan@trentu.ca',
-            From : document.getElementById("email").value,
-            Subject : "New Contact Form Enquiry",
-            Body : "And this is the body"
-        }).then(
-          message => alert(message)
-        );
-      }
-    </script>
 
 
 
-     <!-- -----------------footer design----------------------- -->
-     <section class="footer">
+
+
+
+
+
+    <!-- -----------------footer design----------------------- -->
+    <!-- <section class="footer">
       <div class="footer-box">
         <div class="footer1">
           <h1>ERPNOW</h1>
@@ -139,7 +109,7 @@
         </div>
 
       </div>
-    </section>
+    </section> -->
 
 
   </body>
