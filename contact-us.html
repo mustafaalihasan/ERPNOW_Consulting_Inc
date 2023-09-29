@@ -75,35 +75,17 @@
         <h1>Contact Us</h1>
         <h2>Get In Touch With Us</h2>
         <div class="contact-box">
-          <form onsubmit="sendEmail(); reset(); return false;">
+          <form>
+            <!-- onsubmit="e(); reset(); return false;" -->
             <input type="text" id="name" placeholder="Enter Your Full Name" required>
             <input type="email" id="email" placeholder="Enter Your E-mail Address" required>
             <textarea id="message" rows="6" placeholder="Write your message..."></textarea>
-            <button type="submit">Submit</button>
+            <button type="submit" id="submit">Submit</button>
           </form>
         </div>
 
       </div>
     </section>
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-      function sendEmail(){
-                Email.send({
-            Host : "smtp.gmail.com",
-            Username : "mustali50@gmail.com",
-            Password : "qrmB6wo5pkmsT07861",
-            To : 'mustafaalihasan@trentu.ca',
-            From : document.getElementById("email").value,
-            Subject : "New Contact Form Enquiry",
-            Body : "And this is the body"
-        }).then(
-          message => alert(message)
-        );
-      }
-    </script>
-
-
 
      <!-- -----------------footer design----------------------- -->
      <section class="footer">
@@ -141,6 +123,95 @@
       </div>
     </section>
 
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
+    <script>
+
+      // Initialize Email.js with your service ID
+      emailjs.init("8Jo8359aMK1OT_tca");
+
+      // Add an event listener to your form's submit button
+      document.getElementById("submit").addEventListener("click", function (e) {
+          e.preventDefault();
+
+          // Get form data
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var message = document.getElementById("message").value;
+
+          if (name == "" || email == "" || message == "") {
+            return;
+          }
+
+          // Use the send method to send the email
+          emailjs.send("service_vdw8vvr", "template_9p6g2hc", {
+              from_name: name,
+              from_email: email,
+              to_email: 'vision.mfx@gmail.com',
+              to_name: 'ERPNOW',
+              message_html: message,
+          })
+          .then(function (response) {
+              console.log("Email sent successfully:", response);
+              alert("Email sent successfully!");
+          })
+          .catch(function (error) {
+              console.error("Email could not be sent:", error);
+              alert("Email could not be sent.");
+          });
+      });
+        
+    </script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- // // function sendEmail(){
+  // //           Email.send({
+  // //       SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+  // //       To : 'them@website.com',
+  // //       From : "you@isp.com",
+  // //       Subject : "This is the subject",
+  // //       Body : "And this is the body"
+  // //   }).then(
+  // //     message => alert(message)
+  // //   );
+  // // }
+
+  //   var btn = document.getElementById('submit');
+  //   btn.addEventListener('click', function(e){
+  //     e.preventDefault();
+
+  //     var name = document.getElementById('name').value;
+  //     var email = document.getElementById('email').value;
+  //     var subject = "New Contact Enquiry";
+  //     var message = document.getElementById('message').value;
+
+  //     var body = 'Name: ' +name + '<br/> Email: ' + email + '<br/> subject: ' + subject + 
+  //     '<br/> Message: ' + message;
+  //     console.log(body);
+  //     // 68012d70-eea2-4b8a-954f-001367616847
+      
+  //       Email.send({
+  //         SecureToken : "cb963f4b-6af3-4811-baf2-9a4e8c6d74f9",
+  //         To : 'vision.mfx@gmail.com',
+  //         From : "mustali50@gmail.com",
+  //         Subject : "New Contact Enquiry",
+  //         Body : body
+  //     }).then(
+  //       message => alert(message)
+  //     );
+
+
+  //   }) -->

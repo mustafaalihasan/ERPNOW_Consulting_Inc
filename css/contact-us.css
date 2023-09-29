@@ -149,22 +149,22 @@ header{
 .canada{
   left: 24%;
   top: 21%;
-    cursor: pointer;
+  cursor: pointer;
 }
 .states{
   left: 20%;
   top: 30%;
-    cursor: pointer;
+  cursor: pointer;
 }
 .uk{
   left: 46%;
   top: 23%;
-    cursor: pointer;
+  cursor: pointer;
 }
 .pakistan{
   right: 35%;
   top: 38%;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 @keyframes wave{
@@ -277,6 +277,7 @@ form input, form textarea{
   outline: none;
   background-color: #e0e0e0;
   font-size: 16px;
+  border-radius: 10px;
 }
 form button{
   padding: 15px;
